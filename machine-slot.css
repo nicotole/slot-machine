@@ -1,3 +1,4 @@
+
 :root{
     --background-color: #88dbff;
     --case-color: #fffbff;
@@ -7,6 +8,9 @@
     --border-radius-visor: 17px 17px 17px 17px;
     --reel-inner-color: #ffea7b;
 }
+
+
+
 body{
     background-color: var(--background-color);
     display: flex;
@@ -20,7 +24,7 @@ body{
 
 .machine-case{
     width: 25%;
-    height: 300px;
+    height: 280px;
     background-color: #fffbff;
     border: 3px solid  #623e56;
     border-radius: 37px 37px 0px 0px;
@@ -77,6 +81,20 @@ body{
     height: 50px;
     border: 2px solid  #623e56;
     box-shadow: 5px 5px 0px -2px rgba(0,0,0,0.04);
+    
+}
+
+.shine{
+    animation: shine 1.5s infinite linear;
+}
+
+@keyframes shine{
+    0%{
+        background-color: #fa538b;
+    }
+    50%{
+        background-color: #ff80a8;
+    }
 }
 
 .machine-case-bottom{
@@ -153,6 +171,12 @@ body{
 }
 
 div.reel img{
-    margin-left: 10px;
+    /* width: 135%; */
+    /* margin-left:-15px; */
+    width: 115%;
 }
+
+/* .fake-button:hover{
+    background-color: #ff80aa;
+} */
 
