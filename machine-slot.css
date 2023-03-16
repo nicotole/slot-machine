@@ -30,6 +30,7 @@ body{
     border-radius: 37px 37px 0px 0px;
     box-shadow: inset -15px 31px 4px -23px rgba(0,0,0,0.04);
     /* margin-top: 15%; */
+    position: absolute;
 }
 
 .visor{
@@ -108,7 +109,7 @@ body{
     position: absolute;
     width: 25%;
     margin-left: 24.8%;
-    margin-top: -10%;
+    margin-top: -25%;
 }
 
 
@@ -125,18 +126,66 @@ body{
     -moz-box-shadow: inset -19px -35px 28px -32px rgba(0,0,0,0.75);
     box-shadow: inset -19px -35px 28px -32px rgba(0,0,0,0.75);
     position: absolute;
-    margin-top: -50px ;
-    margin-left: 7%;
+    /* margin-top: -50px ; */
+    /* margin-left: 7%; */
+    left: 279px;
+    bottom: 50px;
     z-index: 1;
+    
+}
+
+.handle-ball-active{
+    animation-name: goDown;
+    animation-duration: .5s;
+    animation-iteration-count: 2 ;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes goDown {
+    from{
+        /* bottom: 50px; */
+        transform: translateY(0);
+    }
+    to{
+        /* bottom: -40px; */
+        transform: translateY(160%);
+    }
 }
 
 .handle-stick{
     height: 100px;
-    width: 5%;
+    width: 15%;
+    left: 298px;
+    top: -53px;
+
     border: 2px solid #623e56;
     background-color: #ffea7b;
-    margin-left: 12%;
+    
     position: absolute;   
+}
+
+.handle-stick-active{
+    animation-name: goShorter;
+    animation-duration: .5s;
+    animation-iteration-count: 2 ;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+   
+}
+
+@keyframes goShorter {
+    from{
+        height: 100px;
+    }
+    to{
+        height: 30px; 
+        top: 30px; 
+        
+        border-radius: 10px 10px 200px 200px;
+        -moz-border-radius: 10px 10px 200px 200px;
+        -webkit-border-radius: 10px 10px 200px 200px;
+    }
 }
 
 .handle-stick-connector{
@@ -146,12 +195,12 @@ body{
     border: 2px solid #623e56;
 
     background-color: #c53069;
-    width: 22%;
+    width: 40%;
     height: 30px;
 
     position: absolute;
-    margin-top: 100px;
-
+    top: 45px;
+    left: 295px;
     z-index: -1;
 }
 
@@ -163,11 +212,14 @@ body{
     -webkit-border-radius: 0px 194px 194px 0px; */
 
     background-color: #fa538b;
-    width: 10%;
+    width: 40%;
     height: 100px;
 
+    top: 10px;
+    left: 258px;
+
     position: absolute;
-    margin-top: 70px;
+    /* margin-top: 70px; */
 }
 
 div.reel img{
